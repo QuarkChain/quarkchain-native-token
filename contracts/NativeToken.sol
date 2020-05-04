@@ -37,7 +37,7 @@ library NativeToken {
 
     /**
      * @dev Transfers native tokens for the given address, token and value.
-       TODO: should also support data field.
+     *  TODO: should also support data field.
      */
     function transferToken(address to, uint256 tokenId, uint256 value, uint256 resultLen) internal returns (bytes memory) {
         // TODO: should support custom data in the future.
@@ -54,5 +54,15 @@ library NativeToken {
         }
         return output;
     }
+}
 
+interface AllowNonDefaultNativeToken {
+    /**
+     * @dev This modifier is needed if the contract wants to allow transactions with `transfer_token_id`
+     * is not default.
+     */
+   modifier allowToken() {
+        NativeToken.getCurrentToken();
+        _;
+    }
 }

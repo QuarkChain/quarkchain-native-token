@@ -21,6 +21,7 @@
   "license": "MIT",
   "devDependencies": {
     "mocha": "^7.1.2",
+    "solc": "^0.6.7",
     "solhint": "^3.0.0"
   }
 }
