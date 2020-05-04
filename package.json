@@ -1,0 +1,26 @@
+{
+  "name": "quarkchain-native-token",
+  "version": "0.0.1",
+  "description": "Smart contract library for interacting with QuarkChain native tokens",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --exit --recursive",
+    "lint": "solhint --max-warnings 0 \"contracts/**/*.sol\""
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "quarkchain",
+    "token",
+    "smart",
+    "contract"
+  ],
+  "author": "QuarkChain Eng",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^7.1.2",
+    "solhint": "^3.0.0"
+  }
+}
