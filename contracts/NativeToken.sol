@@ -5,11 +5,11 @@ library NativeToken {
     /**
      * @dev Returns native token ID in current transaction.
      */
-    function getCurrentToken() internal returns (uint256) {
+    function getCurrentToken() internal view returns (uint256) {
         uint256[1] memory output;
         assembly {
             // Gas cost: 3.
-            if iszero(call(3, 0x514b430001, 0, 0, 0x00, output, 0x20)) {
+            if iszero(staticcall(3, 0x514b430001, 0, 0x00, output, 0x20)) {
                 revert (0, 0)
             }
         }
@@ -19,7 +19,7 @@ library NativeToken {
     /**
      * @dev Returns native token balance for the given address and token.
      */
-    function getTokenBalance(address target, uint256 tokenId) internal returns (uint256) {
+    function getTokenBalance(address target, uint256 tokenId) internal view returns (uint256) {
         uint256[1] memory output;
         uint256[2] memory input;
 
@@ -28,7 +28,7 @@ library NativeToken {
 
         assembly {
             // Gas cost: 400.
-            if iszero(call(400, 0x514b430005, 0, input, 0x40, output, 0x20)) {
+            if iszero(staticcall(400, 0x514b430005, input, 0x40, output, 0x20)) {
                 revert (0, 0)
             }
         }
