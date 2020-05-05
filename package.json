@@ -6,7 +6,6 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --exit --recursive",
     "lint": "solhint --max-warnings 0 \"contracts/**/*.sol\""
   },
   "keywords": [
@@ -20,8 +19,8 @@
   "author": "QuarkChain Eng",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "^7.1.2",
     "solc": "^0.6.7",
     "solhint": "^3.0.0"
-  }
+  },
+  "dependencies": {}
 }
