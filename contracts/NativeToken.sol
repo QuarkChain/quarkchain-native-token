@@ -61,7 +61,7 @@ interface AllowNonDefaultNativeToken {
      * @dev This modifier is needed if the contract wants to allow transactions with `transfer_token_id`
      * is not default.
      */
-   modifier allowToken() {
+    modifier allowToken() {
         NativeToken.getCurrentToken();
         _;
     }
