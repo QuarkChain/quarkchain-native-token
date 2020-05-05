@@ -2,11 +2,18 @@
   "name": "quarkchain-native-token",
   "version": "0.0.1",
   "description": "Smart contract library for interacting with QuarkChain native tokens",
-  "directories": {
-    "test": "test"
-  },
+  "files": [
+    "contracts/**/*.sol",
+    "build/contracts/*.json",
+    "!contracts/examples"
+  ],
   "scripts": {
+    "prepare": "node scripts/prepare.js",
     "lint": "solhint --max-warnings 0 \"contracts/**/*.sol\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QuarkChain/quarkchain-native-token"
   },
   "keywords": [
     "solidity",
@@ -19,6 +26,7 @@
   "author": "QuarkChain Eng",
   "license": "MIT",
   "devDependencies": {
+    "micromatch": "^4.0.2",
     "solc": "^0.6.7",
     "solhint": "^3.0.0"
   },
