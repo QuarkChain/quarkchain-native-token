@@ -8,7 +8,7 @@
     "!contracts/examples"
   ],
   "scripts": {
-    "prepare": "node scripts/prepare.js",
+    "compile": "node scripts/compile.js",
     "lint": "solhint --max-warnings 0 \"contracts/**/*.sol\""
   },
   "repository": {
